@@ -1,16 +1,26 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(word){
+  // Remove any spaces and convert the word to lowercase
+  word = word.toLowerCase();
+
+  // Check if the word is equal to its reverse
+  if (word === word.split("").reverse().join("")) {
+    return true;
+  } else {
+    return false;
+  }
 }
+isPalindrome('abba')
 
 /* 
-  Add your pseudocode here
-*/
+remove the spaces and change to lowercase
+Assign input variable as word.lowerCase
+initialize an if statement
 
 /*
-  Add written explanation of your solution here
+ If reverse of input is same to the palindrome, print condition true else print false 
 */
 
-// You can run `node index.js` to view these console logs
+// You can run node index.js to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
